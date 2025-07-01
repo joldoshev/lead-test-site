@@ -650,7 +650,7 @@ footer p {
 
     .hero-logo-fish {
         width: 200px;
-        bottom: -90px;
+        bottom: -100px;
         left: -10px;
     }
 
@@ -682,7 +682,7 @@ footer p {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 150px 0 140px;
+        padding: 150px 0 180px;
     }
 
     .hero h1 {
@@ -691,7 +691,7 @@ footer p {
 
     .hero-logo-fish {
         width: 150px;
-        bottom: -70px;
+        bottom: -85px;
     }
 
     .cta-button {
