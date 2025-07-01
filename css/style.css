@@ -163,6 +163,8 @@ header .container {
     font-size: 18px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 15px rgba(249, 132, 74, 0.4);
+    position: relative;
+    z-index: 3;
 }
 
 .cta-button:hover {
