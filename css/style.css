@@ -452,7 +452,7 @@ header .container {
 }
 
 .review-card {
-    flex: 0 0 360px;
+    flex: 0 0 450px;
     background-color: #f7f9ff;
     border-radius: 20px;
     overflow: hidden;
@@ -469,15 +469,10 @@ header .container {
     background-color: #333;
 }
 
-.review-photo {
-    height: 200px;
-}
-
 .review-photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: #ddd; /* Placeholder color */
+    height: auto;
+    display: block;
 }
 
 .review-content {
@@ -643,4 +638,88 @@ footer p {
 
 .iti .iti__country-list {
     z-index: 102;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-logo-fish {
+        width: 200px;
+        bottom: -80px;
+        left: -10px;
+    }
+
+    .cta-button {
+        margin-top: 20px;
+    }
+
+    .features h2 {
+        font-size: 32px;
+    }
+
+    .feature-item h3 {
+        min-height: auto;
+    }
+
+    .cta-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-card-left {
+        margin-bottom: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .reviews h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 150px 0 100px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-logo-fish {
+        width: 150px;
+        bottom: -60px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        flex: 0 0 90%;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modal {
+        width: calc(100% - 20px);
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
 }
