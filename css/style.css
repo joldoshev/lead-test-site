@@ -652,10 +652,6 @@ footer p {
         left: -10px;
     }
 
-    .cta-button {
-        margin-top: 20px;
-    }
-
     .features h2 {
         font-size: 32px;
     }
@@ -684,7 +680,7 @@ footer p {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 150px 0 100px;
+        padding: 150px 0 140px;
     }
 
     .hero h1 {
