@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         CATEGORY_ID: dealCategoryID,
                         STAGE_ID: initialStageId,
                         CONTACT_ID: contactId,
-                        COMMENTS: `Проект: ${data.PROJECT}\nРоль: ${data.ROLE}\nКласс: ${data.GRADE}`,
+                        COMMENTS: `Проект: ${data.PROJECT}\nРоль: ${data.ROLE}\nКласс: ${data.GRADE}\nРегион: ${data.REGION}`,
                         SOURCE_ID: 'WEB'
                     }
                 };

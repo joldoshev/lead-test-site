@@ -114,6 +114,26 @@
             </div>
         </section>
 
+        <section class="guide-section">
+            <div class="container">
+                <div class="guide-content">
+                    <div class="guide-text">
+                        <span class="tag">Для учеников 8-10 классов</span>
+                        <h2>Список Топовых университетов со стипендии от 6000$/год</h2>
+                        <p>Мы подготовили гайд и список университетов, где Вы можете в 2025 году податься на стипендию</p>
+                        <a href="#" class="btn-guide open-modal-button">Получить гайд</a>
+                    </div>
+                    <div class="guide-image">
+                        <div class="date-badge">
+                            <p>2 июля</p>
+                            <span>после этой даты гайд станет платным</span>
+                        </div>
+                        <img src="img/guide-student.png" alt="Student with a guide">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="why-us">
             <div class="container">
                 <h2>Почему <span class="highlight-orange">более 5000</span><br>студентов выбрали нас?</h2>
@@ -123,15 +143,15 @@
                         <p>Результат поступления в университеты мирового уровня</p>
                     </div>
                     <div class="stat-item">
-                        <strong>10 лет</strong>
+                        <strong>5 лет</strong>
                         <p>Опыта в сфере образования за рубежом</p>
                     </div>
                     <div class="stat-item">
                         <strong>Менторы</strong>
-                        <p>Менторы из Лиги плюща и Oxford</p>
+                        <p>Менторы из Топовых университетов мира</p>
                     </div>
                     <div class="stat-item">
-                        <strong>>$15.000.000</strong>
+                        <strong>>$7.000.000</strong>
                         <p>Получено на стипендии и гранты нашими учениками</p>
                     </div>
                 </div>
@@ -187,10 +207,23 @@
             <form id="bitrix-form" class="modal-form">
                 <input type="hidden" name="PROJECT" value="проект">
                 <div class="form-group">
-                    <input type="text" name="NAME" placeholder="Zholdozh Toktorbaev" required>
+                    <input type="text" name="NAME" placeholder="Ваше имя" required>
                 </div>
                 <div class="form-group">
                     <input type="tel" id="phone" name="PHONE" required>
+                </div>
+                <div class="form-group">
+                    <select name="REGION" required>
+                        <option value="" disabled selected>Выберите регион</option>
+                        <option value="Бишкек">Бишкек</option>
+                        <option value="Чуй">Чуй</option>
+                        <option value="Ыссык-Куль">Ыссык-Куль</option>
+                        <option value="Талас">Талас</option>
+                        <option value="Нарын">Нарын</option>
+                        <option value="Жалал-Абад">Жалал-Абад</option>
+                        <option value="Баткен">Баткен</option>
+                        <option value="Ош">Ош</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <select name="ROLE" required>
