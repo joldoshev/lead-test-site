@@ -488,20 +488,120 @@ header .container {
 
 /* Footer */
 footer {
-    background-color: #30106b;
-    color: #eaf2ff;
-    padding: 30px 0;
+    background-color: #1a0838;
+    color: #fff;
+    padding: 50px 0;
 }
 
-footer .container {
+.footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
 }
 
-footer p {
-    margin: 0;
+.footer-info {
+    max-width: 300px;
+}
+
+.footer-logo h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 20px;
+    color: #fff;
+}
+
+.footer-info p {
     font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-column a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #4a238e;
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: #2a105c;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card:hover {
+    background-color: #3b1681;
+}
+
+.contact-card i {
+    font-size: 32px;
+    color: #fff;
+}
+
+.contact-card span {
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+}
+
+.contact-card p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0 0;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Modal Styles */
