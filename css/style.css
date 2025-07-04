@@ -28,20 +28,6 @@ header .container {
     align-items: center;
 }
 
-.logo a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
 #form-message {
     margin-bottom: 15px;
     padding: 10px;
@@ -513,11 +499,6 @@ footer .container {
     align-items: center;
 }
 
-footer .logo a {
-    background-color: #fff;
-    color: #30106b;
-}
-
 footer p {
     margin: 0;
     font-size: 14px;
@@ -648,7 +629,7 @@ footer p {
 
     .hero-logo-fish {
         width: 200px;
-        bottom: -110px;
+        bottom: -140px;
         left: -10px;
     }
 
@@ -689,7 +670,7 @@ footer p {
 
     .hero-logo-fish {
         width: 150px;
-        bottom: -95px;
+        bottom: -120px;
     }
 
     .cta-button {
@@ -789,32 +770,6 @@ footer p {
     border-radius: 25px;
 }
 
-.date-badge {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f9844a;
-    color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    min-width: 280px;
-}
-
-.date-badge p {
-    font-size: 48px;
-    font-weight: 900;
-    margin: 0;
-    line-height: 1;
-}
-
-.date-badge span {
-    font-size: 16px;
-    display: block;
-    margin-top: 10px;
-}
-
 @media (max-width: 992px) {
     .guide-content {
         flex-direction: column;
@@ -825,10 +780,6 @@ footer p {
         margin-top: 50px;
     }
 
-    .date-badge {
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 @media (max-width: 768px) {
@@ -836,15 +787,4 @@ footer p {
         font-size: 28px;
     }
 
-    .date-badge {
-        min-width: 240px;
-    }
-
-    .date-badge p {
-        font-size: 36px;
-    }
-
-    .date-badge span {
-        font-size: 14px;
-    }
 }
