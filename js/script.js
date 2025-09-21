@@ -215,4 +215,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- YouTube Shorts Carousel ---
+    (function initShortsCarousel() {
+    // Replace with your real Shorts video IDs
+    const SHORTS_IDS = [
+        't-FFtUXcpgg', // first
+        'fTO4rvbFuzI', // second
+        '4BBjBvSXsjc'  // third (added)
+    ];
+
+    const prevBtn = document.getElementById('shorts-prev');
+    const nextBtn = document.getElementById('shorts-next');
+    const frame1 = document.getElementById('shorts-iframe-1');
+    const frame2 = document.getElementById('shorts-iframe-2');
+    const frame3 = document.getElementById('shorts-iframe-3');
+
+    if (!prevBtn || !nextBtn || !frame1 || !frame2 || !frame3) return;
+
+    let index = 0; // index of the first visible item
+
+    // Build embed URL: use standard /embed/ for all (works for Shorts and normal videos)
+    const embedUrl = (id) => `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`;
+
+    function render() {
+        const a = SHORTS_IDS[(index + 0) % SHORTS_IDS.length];
+        const b = SHORTS_IDS[(index + 1) % SHORTS_IDS.length];
+        const c = SHORTS_IDS[(index + 2) % SHORTS_IDS.length];
+        frame1.src = embedUrl(a);
+        frame2.src = embedUrl(b);
+        frame3.src = embedUrl(c);
+    }
+
+    function prev() {
+        index = (index - 1 + SHORTS_IDS.length) % SHORTS_IDS.length;
+        render();
+    }
+
+    function next() {
+        index = (index + 1) % SHORTS_IDS.length;
+        render();
+    }
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+    render();
+})();
+
 });
