@@ -221,8 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Replace with your real Shorts video IDs
     const SHORTS_IDS = [
         't-FFtUXcpgg', // first
-        'fTO4rvbFuzI', // second
-        '4BBjBvSXsjc'  // third (added)
+        'QGMNz82upfw', // second (updated)
+        'rGarTpdB7hQ'  // third (updated)
     ];
 
     const prevBtn = document.getElementById('shorts-prev');
@@ -256,10 +256,62 @@ document.addEventListener('DOMContentLoaded', () => {
         index = (index + 1) % SHORTS_IDS.length;
         render();
     }
-
     prevBtn.addEventListener('click', prev);
     nextBtn.addEventListener('click', next);
     render();
 })();
 
+    // --- Team Images Carousel (Guide Section) ---
+    (function initTeamCarousel() {
+        const order = [
+            'Team/2.png',
+            'Team/3.png',
+            'Team/4 (1).png',
+            'Team/5 (1).png',
+            'Team/6.png',
+            'Team/7.png',
+            'Team/8.png',
+            'Team/9.png',
+            'Team/10 (1).png',
+            'Team/12 (1).png',
+            'Team/13.png'
+        ];
+
+        const imgEl = document.getElementById('team-carousel-image');
+        const prevBtn = document.getElementById('team-prev');
+        const nextBtn = document.getElementById('team-next');
+        if (!imgEl || !prevBtn || !nextBtn) return;
+
+        let idx = 0;
+        const show = (i) => { imgEl.src = order[i]; };
+        const prev = () => { idx = (idx - 1 + order.length) % order.length; show(idx); };
+        const next = () => { idx = (idx + 1) % order.length; show(idx); };
+
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+        show(idx);
+    })();
+
+    // --- Team manual scroll arrows wiring ---
+    (function initTeamScrollArrows() {
+        const scroller = document.querySelector('.team-scroll');
+        const prev = document.getElementById('team-scroll-prev');
+        const next = document.getElementById('team-scroll-next');
+        if (!scroller || !prev || !next) return;
+
+        const getStep = () => {
+            const firstCard = scroller.querySelector('.team-image');
+            const style = window.getComputedStyle(scroller);
+            const gapPx = parseFloat(style.gap || style.columnGap || '16');
+            const cardW = firstCard ? firstCard.getBoundingClientRect().width : 280;
+            return Math.max(100, Math.round(cardW + gapPx));
+        };
+
+        prev.addEventListener('click', () => {
+            scroller.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        });
+        next.addEventListener('click', () => {
+            scroller.scrollBy({ left: getStep(), behavior: 'smooth' });
+        });
+    })();
 });
